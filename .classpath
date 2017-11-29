@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Spotifree/Iteracion2/src/main/java"/>
+	<classpathentry kind="src" path="Spotifree/Iteracion2/src/test/java"/>
+	<classpathentry kind="src" path="Spotifree/Iteracion3/src/main/java"/>
+	<classpathentry kind="src" path="Spotifree/Iteracion3/src/test/java"/>
+	<classpathentry kind="src" path="Spotifree/Iteracion4/src/main/java"/>
+	<classpathentry kind="src" path="Spotifree/Iteracion4/src/test/java"/>
+	<classpathentry kind="src" path="Spotifree/Iteracion5/src/main/java"/>
+	<classpathentry kind="src" path="Spotifree/Iteracion5/src/test/java"/>
+	<classpathentry kind="src" path="Spotifree/Iteracion6/src/main/java"/>
+	<classpathentry kind="src" path="Spotifree/Iteracion6/src/test/java"/>
+	<classpathentry kind="src" path="Spotifree/Iteracion7/src/main/java"/>
+	<classpathentry kind="src" path="Spotifree/Iteracion7/src/test/java"/>
+	<classpathentry kind="src" path="Spotifree/Iteracion8/src/main/java"/>
+	<classpathentry kind="src" path="Spotifree/Iteracion8/src/test/java"/>
+	<classpathentry kind="src" path="Spotifree/Itreacion3/src/main/java"/>
+	<classpathentry kind="src" path="Spotifree/Itreacion3/src/test/java"/>
+	<classpathentry kind="src" path="Spotifree/src/main/java"/>
+	<classpathentry kind="src" path="Spotifree/src/test/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="Spotifree/Iteracion2/target/classes"/>
+</classpath>
