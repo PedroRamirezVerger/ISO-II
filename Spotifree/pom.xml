@@ -32,4 +32,11 @@
   	<module>Iteracion7</module>
   	<module>Iteracion8</module>
   </modules>
+  <organization>
+  	<name>Squanch Development Media</name>
+  	<url>https://sites.google.com/view/squanchdevelopementmedia/p%C3%A1gina-principal</url>
+  </organization>
+  <scm>
+  	<url>https://github.com/PedroRamirezVerger/Squanch-Development-Media.git</url>
+  </scm>
 </project>
