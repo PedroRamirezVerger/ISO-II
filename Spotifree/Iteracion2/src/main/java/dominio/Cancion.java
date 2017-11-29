@@ -6,18 +6,18 @@ public class Cancion {
 	private int id;
 	private String nombre;
 	private String estilo;
-	private String artista;
+	private Artista artista;
 	private Album album;
 	private double precio;
 	private Cancion me = new Cancion(duracion, id, nombre, estilo, artista, album, precio);
 
-	public Cancion(double duracion, int id, String nombre, String estilo, String artista, Album album, double precio) {
+	public Cancion(double duracion, int id, String nombre, String estilo, Artista artista2, Album album, double precio) {
 		super();
 		this.duracion = duracion;
 		this.id = id;
 		this.nombre = nombre;
 		this.estilo = estilo;
-		this.artista = artista;
+		this.artista = artista2;
 		this.album = album;
 		this.precio = precio;
 	}
@@ -54,11 +54,11 @@ public class Cancion {
 		this.estilo = estilo;
 	}
 
-	public String getArtista() {
+	public Artista getArtista() {
 		return artista;
 	}
 
-	public void setArtista(String artista) {
+	public void setArtista(Artista artista) {
 		this.artista = artista;
 	}
 
@@ -78,11 +78,20 @@ public class Cancion {
 		this.precio = precio;
 	}
 
-	public int buscarcancion(String nombre) {
+	public int buscarcancion(int id) {
 		int encontrado=0;
-		if (this.nombre == nombre) {
+		if (this.id == id) {
 			encontrado=1;
 		} 
 		return encontrado;
+	}
+	public void borrar(){
+		me.setAlbum(null);
+		me.setArtista(null);
+		me.setDuracion(0);
+		me.setEstilo(null);
+		me.setId(0);
+		me.setNombre(null);
+		me.setPrecio(0);
 	}
 }

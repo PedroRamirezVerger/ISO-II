@@ -6,7 +6,7 @@ public class Artista {
 
 	private String nombre;
 	private ArrayList<Album> albumes;
-	private ArrayList<Cancion> canciones;
+	private static ArrayList<Cancion> canciones;
 	public Artista(String nombre, ArrayList<Album> albumes, ArrayList<Cancion> canciones) {
 		super();
 		this.nombre = nombre;
@@ -30,5 +30,15 @@ public class Artista {
 	}
 	public void setCanciones(ArrayList<Cancion> canciones) {
 		this.canciones = canciones;
+	}
+	public static int buscarcancion(int id) {
+		int posicion=-1;
+		for (int i = 0; i < canciones.size(); i++) {
+			if (canciones.contains(id)) {
+				posicion=canciones.indexOf(id);
+			} 
+		}
+		
+		return posicion;
 	}
 }

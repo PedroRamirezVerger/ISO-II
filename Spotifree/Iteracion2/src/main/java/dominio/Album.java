@@ -47,4 +47,14 @@ public class Album {
 	public void setArtista(Artista artista) {
 		Artista = artista;
 	}
+	public int buscarcancion(int id) {
+		int posicion=-1;
+		for (int i = 0; i < canciones.size(); i++) {
+			if (canciones.contains(id)) {
+				posicion=canciones.indexOf(id);
+			} 
+		}
+		
+		return posicion;
+	}
 }
