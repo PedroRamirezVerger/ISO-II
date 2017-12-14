@@ -15,10 +15,6 @@ public class Cancion {
 	private Artista artista;
 	private Album album;
 	private double precio;
-<<<<<<< Upstream, based on branch 'master' of https://github.com/PedroRamirezVerger/Squanch-Development-Media.git
-	
-=======
->>>>>>> dae3986 Arreglos it 2
 
 	public Cancion(int duracion, int id, String nombre, String estilo, Artista artista, Album album, double precio) {
 		super();
@@ -87,9 +83,6 @@ public class Cancion {
 		this.precio = precio;
 	}
 
-<<<<<<< Upstream, based on branch 'master' of https://github.com/PedroRamirezVerger/Squanch-Development-Media.git
-	
-=======
 	public void borrar(){
 		setAlbum(null);
 		setArtista(null);
@@ -99,5 +92,4 @@ public class Cancion {
 		setNombre(null);
 		setPrecio(0);
 	}
->>>>>>> dae3986 Arreglos it 2
 }
