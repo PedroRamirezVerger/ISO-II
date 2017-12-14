@@ -13,10 +13,6 @@ import dominio.Artista;
 import dominio.Buscar;
 import dominio.Cancion;
 
-/**
- * Hello world!
- *
- */
 public class App {
 	public static Buscar bus = null;
  

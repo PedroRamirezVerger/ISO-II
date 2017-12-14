@@ -9,7 +9,7 @@ public class Cancion {
 	private Artista artista;
 	private Album album;
 	private double precio;
-	private Cancion me = new Cancion(duracion, id, nombre, estilo, artista, album, precio);
+	
 
 	public Cancion(String duracion2, int id, String nombre, String estilo, Artista artista2, Album album, double precio) {
 		super();
@@ -78,13 +78,5 @@ public class Cancion {
 		this.precio = precio;
 	}
 
-	public void borrar(){
-		me.setAlbum(null);
-		me.setArtista(null);
-		me.setDuracion("0");
-		me.setEstilo(null);
-		me.setId(0);
-		me.setNombre(null);
-		me.setPrecio(0);
-	}
+	
 }
