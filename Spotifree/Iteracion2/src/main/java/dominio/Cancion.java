@@ -2,7 +2,7 @@ package dominio;
 
 public class Cancion {
 
-	private double duracion;
+	private String duracion;
 	private int id;
 	private String nombre;
 	private String estilo;
@@ -11,9 +11,9 @@ public class Cancion {
 	private double precio;
 	private Cancion me = new Cancion(duracion, id, nombre, estilo, artista, album, precio);
 
-	public Cancion(double duracion, int id, String nombre, String estilo, Artista artista2, Album album, double precio) {
+	public Cancion(String duracion2, int id, String nombre, String estilo, Artista artista2, Album album, double precio) {
 		super();
-		this.duracion = duracion;
+		this.duracion = duracion2;
 		this.id = id;
 		this.nombre = nombre;
 		this.estilo = estilo;
@@ -22,12 +22,12 @@ public class Cancion {
 		this.precio = precio;
 	}
 
-	public double getDuracion() {
+	public String getDuracion() {
 		return duracion;
 	}
 
-	public void setDuracion(double duracion) {
-		this.duracion = duracion;
+	public void setDuracion(String duracion2) {
+		this.duracion = duracion2;
 	}
 
 	public int getId() {
@@ -78,17 +78,10 @@ public class Cancion {
 		this.precio = precio;
 	}
 
-	public int buscarcancion(int id) {
-		int encontrado=0;
-		if (this.id == id) {
-			encontrado=1;
-		} 
-		return encontrado;
-	}
 	public void borrar(){
 		me.setAlbum(null);
 		me.setArtista(null);
-		me.setDuracion(0);
+		me.setDuracion("0");
 		me.setEstilo(null);
 		me.setId(0);
 		me.setNombre(null);
