@@ -15,7 +15,7 @@ public class Añadir {
 
 	public static ArrayList<Cancion> añad(ArrayList<Cancion> can, ArrayList<Artista> art,ArrayList<Album> alb){
 		System.out.println("Introduce la duracion de la cancion en segundos:");
-		String duracion = Teclado.next();
+		int duracion = Integer.parseInt(Teclado.next());
 		System.out.println("Introduce el nombre de la cancion:");
 		String nombre=Teclado.next();
 		System.out.println("Introduce el estilo de la cancion:");

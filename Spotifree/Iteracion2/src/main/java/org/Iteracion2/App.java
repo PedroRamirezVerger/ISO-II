@@ -23,7 +23,7 @@ public class App {
 		BufferedReader br = new BufferedReader(fr);
 		String linea;
 		while ((linea = br.readLine()) != null) {
-			String duracion = linea;
+			int duracion = Integer.parseInt(linea);
 			int id = br.read();
 			String nombre = br.readLine();
 			String estilo = br.readLine();

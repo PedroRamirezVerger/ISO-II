@@ -1,33 +1,42 @@
 package dominio;
 
+
+/**
+ * 
+ * 
+ * 
+ * */
 public class Cancion {
 
-	private String duracion;
+	private int duracion;
 	private int id;
 	private String nombre;
 	private String estilo;
 	private Artista artista;
 	private Album album;
 	private double precio;
+<<<<<<< Upstream, based on branch 'master' of https://github.com/PedroRamirezVerger/Squanch-Development-Media.git
 	
+=======
+>>>>>>> dae3986 Arreglos it 2
 
-	public Cancion(String duracion2, int id, String nombre, String estilo, Artista artista2, Album album, double precio) {
+	public Cancion(int duracion, int id, String nombre, String estilo, Artista artista, Album album, double precio) {
 		super();
-		this.duracion = duracion2;
+		this.duracion = duracion;
 		this.id = id;
 		this.nombre = nombre;
 		this.estilo = estilo;
-		this.artista = artista2;
+		this.artista = artista;
 		this.album = album;
 		this.precio = precio;
 	}
 
-	public String getDuracion() {
+	public int getDuracion() {
 		return duracion;
 	}
 
-	public void setDuracion(String duracion2) {
-		this.duracion = duracion2;
+	public void setDuracion(int duracion) {
+		this.duracion = duracion;
 	}
 
 	public int getId() {
@@ -78,5 +87,17 @@ public class Cancion {
 		this.precio = precio;
 	}
 
+<<<<<<< Upstream, based on branch 'master' of https://github.com/PedroRamirezVerger/Squanch-Development-Media.git
 	
+=======
+	public void borrar(){
+		setAlbum(null);
+		setArtista(null);
+		setDuracion(0);
+		setEstilo(null);
+		setId(0);
+		setNombre(null);
+		setPrecio(0);
+	}
+>>>>>>> dae3986 Arreglos it 2
 }
