@@ -1,13 +1,22 @@
 package org.Iteracion5;
 
+import dominio.ReproductorFichero;
 /**
- * Hello world!
  *
  */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+    	if (args.length < 2) {
+    		System.out.println("Uso: " + args[0] + " (ruta fichero audio)");
+    	}
+    	try {
+    		  ReproductorFichero mi_reproductor = new ReproductorFichero();
+    		  mi_reproductor.AbrirFichero(args[1]);
+    		  mi_reproductor.Play();
+    		} catch (Exception ex) {
+    		  System.out.println("Error: " + ex.getMessage());
+    		}
     }
 }
