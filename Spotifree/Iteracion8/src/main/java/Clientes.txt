@@ -1,0 +1,13 @@
+11111111H,Pablo,Palotes_Palo,6301287877099260,01/01/1970,925324123,Pablo.Palotes@gmail.com         
+22222222J,Pedro,Perico_Pico,1954957715286050,01/01/1960,917631010,Pedro.Pico@gmail.com            
+33333333P,Angel,Alonso_Puerta,8485715804305500,01/03/1999,926252525,Angel.Alongo@hotmail.com    
+67543899K,Grace,Hopper,7654321098767090,06/12/1906,987876567,Grace.Hopper@usarmy.us          
+44444444A,Carlos,Campos_Rueda,5196289971660150,02/03/1995,926443333,Carlos.Campos@uclm.es           
+55555555K,Donald,Knuth,3048744771162640,10/01/1938,622768434,Donald.Knuh@uclm.es    
+12345678Z,Alan,Turing_Machine,3194234544753450,23/06/1912,623456789,Alan.Turing@Machine.com         
+87613765L,Hedy,Lamarr,7896909876541230,09/11/1914,567432987,Hedy.Lamarr@Hollywood.us        
+23434234V,Niklaus,Wirth_Pascal,8388712334537010,15/02/1934,958765432,Niklaus.Wirth@Modula.com    
+87692341B,Alonzo,Church_Tesis,6068219727300410,14/06/1903,958760987,Alonzo.Church@Tesis.us          
+98734657L,Lynn,Conway,3245987623457650,02/01/1938,926345678,Lynn.Conway@Microchip.edu    
+87127621X,Kurt,Godel_Theorem,3225298251673200,28/04/1903,925765432,Kurt.Godel@Logi.com             
+21351212J,Leonardo,Torres_Quevedo,5097164970147430,28/12/2000,926543210,Leonardo.Torres@Teleferico.es    
