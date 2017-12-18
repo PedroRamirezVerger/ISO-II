@@ -5,11 +5,11 @@
   <parent>
     <groupId>ISO2</groupId>
     <artifactId>Spotifree</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2</version>
   </parent>
   <groupId>ISO2</groupId>
   <artifactId>Iteracion5</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <name>Iteracion5</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -27,6 +27,12 @@
     <artifactId>basicplayer</artifactId>
     <version>3.0.0.0</version>
 </dependency>
+    <dependency>
+    	<groupId>ISO2</groupId>
+    	<artifactId>Iteracion4</artifactId>
+    	<version>0.0.2</version>
+    </dependency>
+
   </dependencies>
     <build>
     <plugins>

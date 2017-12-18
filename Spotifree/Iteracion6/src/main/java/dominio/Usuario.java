@@ -8,7 +8,7 @@ public class Usuario {
 	private String pais;
 	private Usuario user = new Usuario (nombre, pass, tarjCredito, pais);
 	
-	public Usuario (String nombre, String pass, int tarjCredito){
+	public Usuario (String nombre, String pass, int tarjCredito, String pais){
 		this.nombre = nombre;
 		this.pass = pass;
 		this.tarjCredito = tarjCredito;
