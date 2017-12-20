@@ -35,4 +35,13 @@ public class AppTest
     {
         assertTrue( true );
     }
+    @Test
+    public void testautenticar(){
+    	String titular = ;
+    	long numtarj = ;
+    	String entidad = ;
+    	String fechacaducidad = ;
+    	int cVC = ;
+    	
+    }
 }
