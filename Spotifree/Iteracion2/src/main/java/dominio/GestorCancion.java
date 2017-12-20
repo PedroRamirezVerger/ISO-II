@@ -7,13 +7,27 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Scanner;
 
-public class Añadir {
-	 static Scanner Teclado =new Scanner (System.in);
-	 public static Buscar bus=null;
+public class GestorCancion {	 
+	private Cancion miCancion;
 
-	public static ArrayList<Cancion> añad(ArrayList<Cancion> can, ArrayList<Artista> art,ArrayList<Album> alb){
+	public GestorCancion(Cancion c) {
+		miCancion = c;
+	}
+	
+	public void cancionAFichero(String ruta) {
+		File fichero;
+		try {
+			fichero = new File(ruta);
+			fichero.open();
+		} catch (FileNotFoundException e) {
+			
+		} finally {
+			
+		}
+	}
+	
+	public ArrayList<Cancion> añadirCancionInteractivo(ArrayList<Cancion> can, ArrayList<Artista> art,ArrayList<Album> alb){
 		System.out.println("Introduce la duracion de la cancion en segundos:");
 		int duracion = Integer.parseInt(Teclado.next());
 		System.out.println("Introduce el nombre de la cancion:");
