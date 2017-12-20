@@ -9,24 +9,66 @@ public class Main {
 		String titular;
 		Long numtarj;
 		String entidad;
-		String fechacaducidad;
-		int CVC;
-		Cliente cliente = null;
+		int dia;
+		int mes;
+		int año;
+		int CVV;
         ArrayList<Cliente> clientes;
         clientes = leerClientes("\\Users\\artur\\Desktop\\Clientes.txt", "\\Users\\artur\\Desktop\\Tarjetas.txt");
         Scanner sc = new Scanner(System.in);
-        do {
+        Fecha fecha;
+		do {
         	System.out.println("Introduzca el nombre y apellidos de titular de la tarjeta");
         	titular = sc.nextLine();
+        	while(titular.length()>255){
+        		System.out.println("Error introduzca su nombre y apellidos con un rango entre 0 y 255 caracteres");
+        		System.out.println("Introduzca el nombre y apellidos de titular de la tarjeta");
+            	titular = sc.nextLine();
+        	}
         	System.out.println("Introduzca el número de la tarjeta de credito");
         	numtarj = sc.nextLong();
+        	while(numtarj.toString().length() !=16 || numtarj<0 || numtarj>9999999999999999L){
+        		System.out.println("Error introduzca el número de su tarjeta con un rango entre 0000000000000000 y 9999999999999999");
+        		System.out.println("Introduzca el número de la tarjeta de credito");
+        	}
         	System.out.println("Introduzca la entidad a la que pertenece su tarjeta");
         	entidad = sc.nextLine();
-        	System.out.println("Introduzca el CVC de su tarjeta");
-        	fechacaducidad = sc.nextLine();
-        	System.out.println("Introduzca la fecha de caducidad de su tarjeta. Formato Mes/Año MM/AA");
-        	CVC = sc.nextInt();
-        	}while(Autenticar(titular, numtarj,entidad, fechacaducidad, CVC) ==  false); 
+        	while(entidad.length()>255){
+        		System.out.println("Error el nombre de la entidad a la que pertenece con un rango de 0 a 255 caracteres");
+        		System.out.println("Introduzca la entidad a la que pertenece su tarjeta");
+            	entidad = sc.nextLine();	
+        	}
+        	System.out.println("Introduzca la fecha de caducidad de su tarjeta. Formato Dia/Mes/Año DD/MM/AA");
+        	System.out.println("Introduzca el dia");
+        	dia = sc.nextInt();
+        	while(dia>31 || dia<1){
+        		System.out.println("Error el dia tiene que ser mayor que 0 y menor que 32");
+            	System.out.println("Introduzca el dia");
+            	dia = sc.nextInt();
+        	}
+        	System.out.println("Introduzca el mes");
+        	mes = sc.nextInt();
+        	while(mes<0 || mes > 12){
+        		System.out.println("Error el mes tiene que ser mayor que 0 y menor que 13");
+        	  	System.out.println("Introduzca el mes");
+            	mes = sc.nextInt();
+        	}
+        	System.out.println("Introduzca el año");
+        	año = sc.nextInt();
+        	while(año<2017){
+        		System.out.println("Error el año tiene que ser mayor que 2017");
+        	  	System.out.println("Introduzca el año");
+            	año = sc.nextInt();
+        	}
+        	fecha = new Fecha(dia, mes, año);
+        	System.out.println("Introduzca el CVV de su tarjeta");
+        	CVV = sc.nextInt();
+        	while(Integer.toString(CVV).length()!=3 || CVV<0 || CVV>999){
+        		System.out.println("Error introduzca el CVV de su tarjeta con un rango entre 000 y 999");
+        		System.out.println("Introduzca el CVV de su tarjeta");
+            	CVV = sc.nextInt();	
+        	}
+        	}while(Autenticar(titular, numtarj,entidad, fecha.getFecha(), CVV) ==  false); 
         	
         }
 
