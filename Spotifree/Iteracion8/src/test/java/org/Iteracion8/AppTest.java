@@ -55,4 +55,40 @@ public class AppTest
     	assertEquals(expected,h.comprobarCVV(CVV));
     	
     }
+    @org.junit.Test
+    public void testcomprobar1(){
+    	String titular= " ";
+    	Long numtarj= 1L;
+    	String entidad="455D555";
+    	int dia=27;
+    	int mes=7;
+    	int año=1999;
+    	int CVV=557;
+    	assertEquals(expected,h.comprobartitular(titular));
+    	assertEquals(expected,h.comprobartarjeta(numtarj));
+    	assertEquals(expected,h.comprobarentidad(entidad));
+    	assertEquals(expected,h.comprobardia(dia));
+    	assertEquals(expected,h.comprobarmes(mes));
+    	assertEquals(expected,h.comprobaraño(año));
+    	assertEquals(expected,h.comprobarCVV(CVV));
+    	
+    }
+    @org.junit.Test
+    public void testcomprobar2(){
+    	String titular= " ";
+    	Long numtarj= -1L;
+    	String entidad="";
+    	int dia=-27;
+    	int mes=2;
+    	int año=-52;
+    	int CVV=89;
+    	assertEquals(expected,h.comprobartitular(titular));
+    	assertEquals(expected,h.comprobartarjeta(numtarj));
+    	assertEquals(expected,h.comprobarentidad(entidad));
+    	assertEquals(expected,h.comprobardia(dia));
+    	assertEquals(expected,h.comprobarmes(mes));
+    	assertEquals(expected,h.comprobaraño(año));
+    	assertEquals(expected,h.comprobarCVV(CVV));
+    	
+    }
 }
