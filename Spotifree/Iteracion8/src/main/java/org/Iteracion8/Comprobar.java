@@ -1,10 +1,12 @@
+package org.Iteracion8;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+public class Comprobar {
     private ArrayList<Cancion> canciones = new ArrayList<Cancion>();
+    static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) throws IOException {
 		String titular;
 		Long numtarj;
@@ -15,12 +17,12 @@ public class Main {
 		int CVV;
         ArrayList<Cliente> clientes;
         clientes = leerClientes("\\Users\\artur\\Desktop\\Clientes.txt", "\\Users\\artur\\Desktop\\Tarjetas.txt");
-        Scanner sc = new Scanner(System.in);
+       
         Fecha fecha;
 		do {
         	System.out.println("Introduzca el nombre y apellidos de titular de la tarjeta");
         	titular = sc.nextLine();
-        	while(titular.length()>255){
+        	while(titular.length()>255 || titular.length()<1){
         		System.out.println("Error introduzca su nombre y apellidos con un rango entre 0 y 255 caracteres");
         		System.out.println("Introduzca el nombre y apellidos de titular de la tarjeta");
             	titular = sc.nextLine();
@@ -30,6 +32,7 @@ public class Main {
         	while(numtarj.toString().length() !=16 || numtarj<0 || numtarj>9999999999999999L){
         		System.out.println("Error introduzca el número de su tarjeta con un rango entre 0000000000000000 y 9999999999999999");
         		System.out.println("Introduzca el número de la tarjeta de credito");
+        		numtarj = sc.nextLong();
         	}
         	System.out.println("Introduzca la entidad a la que pertenece su tarjeta");
         	entidad = sc.nextLine();
@@ -60,7 +63,7 @@ public class Main {
         	  	System.out.println("Introduzca el año");
             	año = sc.nextInt();
         	}
-        	fecha = new Fecha(dia, mes, año);
+        	fecha=new Fecha(dia, mes, año);
         	System.out.println("Introduzca el CVV de su tarjeta");
         	CVV = sc.nextInt();
         	while(Integer.toString(CVV).length()!=3 || CVV<0 || CVV>999){
@@ -71,6 +74,89 @@ public class Main {
         	}while(Autenticar(titular, numtarj,entidad, fecha.getFecha(), CVV) ==  false); 
         	
         }
+	public String comprobartitular(String titular){
+		String cierto="";
+		if(titular.length()>255 || titular.length()<1){
+			System.out.println("ERROR AL INTRODUCIR TITULAR");
+			cierto="Correcto";
+		}
+		else if(titular.length()<255||titular.length()>1){
+			cierto="Correcto";
+		}
+		return cierto;
+		
+	}
+	public String comprobartarjeta(Long numtarj){
+		String cierto="";
+		if(numtarj.toString().length() !=16 || numtarj<0 || numtarj>9999999999999999L){
+			System.out.println("ERROR AL INTRODUCIR NUMERO TARJETA");
+			cierto="Correcto";
+		}
+		else if(numtarj.toString().length() ==16 || numtarj>0 || numtarj<9999999999999999L){
+			cierto="Correcto";
+		}
+		return cierto;
+	}
+	public String comprobarentidad(String entidad){
+		String cierto="";
+		if(entidad.length()>255){
+			System.out.println("ERROR AL INTRODUCIR ENTIDAD");
+			cierto="Correcto";	
+		}
+		else if(entidad.length()<255){
+			cierto="Correcto";
+		}
+		return cierto;
+	}
+	public String comprobardia(int dia){
+		String cierto="";
+		if(dia>31 || dia<1){
+			System.out.println("ERROR AL INTRODUCIR DIA");
+			cierto="Correcto";
+		}
+		
+		else if(dia<31 || dia>1){
+			cierto="Correcto";
+		}
+		return cierto;
+	}
+	public String comprobarmes(int mes){
+		String cierto="";
+		if(mes<0 || mes > 12){
+			System.out.println("ERROR AL INTRODUCIR MES");
+			cierto="Correcto";
+		}
+		
+		
+		else if(mes>0 || mes < 12){
+			cierto="Correcto";
+		}
+		return cierto;
+	}
+	public String comprobaraño(int año){
+		String cierto="";
+		if(año<2017){
+			System.out.println("ERROR AL INTRODUCIR AÑO");
+			cierto="Correcto";
+		}
+		else if(año>2017){
+			cierto="Correcto";
+		}
+		return cierto;
+	}
+	public String comprobarCVV(int CVV){
+		String cierto="";
+		if(Integer.toString(CVV).length()!=3 || CVV<0 || CVV>999){
+			System.out.println("ERROR AL INTRODUCIR CVV");
+			cierto="Correcto";
+		}
+		else if(Integer.toString(CVV).length()==3 || CVV>0 || CVV<999){
+			cierto="Correcto";
+		}
+		return cierto;
+	}
+	
+	
 
 	 public static boolean  Autenticar(String titular, long numtarj, String entidad, String fechacaducidad, int cVC) throws IOException
 	 {

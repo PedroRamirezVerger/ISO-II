@@ -4,44 +4,55 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+
+
+import junit.framework.*;
+
 /**
  * Unit test for simple App.
  */
 public class AppTest 
-    extends TestCase
+    
 {
+	private Comprobar h;
     /**
      * Create the test case
      *
      * @param testName name of the test case
      */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
-
+	String expected="Correcto";
+   
+    @Before
+	public void setUp() throws Exception {
+		h = new Comprobar();
+	}
     /**
      * @return the suite of tests being tested
      */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
-    @Test
-    public void testautenticar(){
-    	String titular = ;
-    	long numtarj = ;
-    	String entidad = ;
-    	String fechacaducidad = ;
-    	int cVC = ;
+    @After
+	public void tearDown() {
+	}
+    
+    @org.junit.Test
+    public void testcomprobar(){
+    	String titular= "qqqqqwwwwweeeeerrrrrtttttyyyyyuuuuuiiiiioooooppppph qqqqqwwwwweeeeerrrrrtttttyyyyyuuuuuiiiiioooooppppph qqqqqwwwwweeeeerrrrrtttttyyyyyuuuuuiiiiioooooppppph qqqqqwwwwweeeeerrrrrtttttyyyyyuuuuuiiiiioooooppppph qqqqqwwwwweeeeerrrrrtttttyyyyyuuuuuiiiiioooooppppphg";
+    	Long numtarj= 16L;
+    	String entidad="abcde";
+    	int dia=12;
+    	int mes=14;
+    	int año=2018;
+    	int CVV=55;
+    	assertEquals(expected,h.comprobartitular(titular));
+    	assertEquals(expected,h.comprobartarjeta(numtarj));
+    	assertEquals(expected,h.comprobarentidad(entidad));
+    	assertEquals(expected,h.comprobardia(dia));
+    	assertEquals(expected,h.comprobarmes(mes));
+    	assertEquals(expected,h.comprobaraño(año));
+    	assertEquals(expected,h.comprobarCVV(CVV));
     	
     }
 }

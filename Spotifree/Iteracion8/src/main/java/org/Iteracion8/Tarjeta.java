@@ -1,3 +1,4 @@
+package org.Iteracion8;
 public class Tarjeta {
 	private long num_tarjeta; // N�mero de la tarjeta de cr�dito
     private String titular; // Titular de la tarjeta de cr�dito
