@@ -1,5 +1,7 @@
 package dominio;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 /**
  * 
@@ -15,6 +17,7 @@ public class Cancion {
 	private Artista artista;
 	private Album album;
 	private double precio;
+	private GestorCancion miGestor;
 
 	public Cancion(int duracion, int id, String nombre, String estilo, Artista artista, Album album, double precio) {
 		super();
@@ -25,6 +28,7 @@ public class Cancion {
 		this.artista = artista;
 		this.album = album;
 		this.precio = precio;
+		this.miGestor = new GestorCancion();
 	}
 
 	public int getDuracion() {
@@ -83,12 +87,11 @@ public class Cancion {
 		this.precio = precio;
 	}
 
-	public void añadirCancion() {
-		// crear gestor
-		// 
+	public void leer() throws IOException {
+		miGestor.leerCancion(this);
 	}
-	
-	public void borrar(){
+
+	public void limpiarCampos() {
 		setAlbum(null);
 		setArtista(null);
 		setDuracion(0);
@@ -97,13 +100,13 @@ public class Cancion {
 		setNombre(null);
 		setPrecio(0);
 	}
-	
-//	@Override
-//	public boolean equals(Object other){
-//	    if (other == null) return false;
-//	    if (other == this) return true;
-//	    if (!(other.getClass() != this.getClass()))return false;
-//	    Cancion otherCancion = (Cancion)other;
-//	    return otherCancion.getId() == id;
-//	}	
+
+	// @Override
+	// public boolean equals(Object other){
+	// if (other == null) return false;
+	// if (other == this) return true;
+	// if (!(other.getClass() != this.getClass()))return false;
+	// Cancion otherCancion = (Cancion)other;
+	// return otherCancion.getId() == id;
+	// }
 }
