@@ -80,7 +80,7 @@ public class Comprobar {
 			System.out.println("ERROR AL INTRODUCIR TITULAR");
 			cierto="Correcto";
 		}
-		else if(titular.length()<255||titular.length()>1){
+		if(titular.length()<255||titular.length()>1){
 			cierto="Correcto";
 		}
 		return cierto;
@@ -92,7 +92,7 @@ public class Comprobar {
 			System.out.println("ERROR AL INTRODUCIR NUMERO TARJETA");
 			cierto="Correcto";
 		}
-		else if(numtarj.toString().length() ==16 || numtarj>0 || numtarj<9999999999999999L){
+		if(numtarj.toString().length() ==16 || numtarj>0 || numtarj<9999999999999999L){
 			cierto="Correcto";
 		}
 		return cierto;
@@ -103,7 +103,7 @@ public class Comprobar {
 			System.out.println("ERROR AL INTRODUCIR ENTIDAD");
 			cierto="Correcto";	
 		}
-		else if(entidad.length()<255){
+		if(entidad.length()<255){
 			cierto="Correcto";
 		}
 		return cierto;
@@ -115,7 +115,7 @@ public class Comprobar {
 			cierto="Correcto";
 		}
 		
-		else if(dia<31 || dia>1){
+		if(dia<31 || dia>1){
 			cierto="Correcto";
 		}
 		return cierto;
@@ -128,7 +128,7 @@ public class Comprobar {
 		}
 		
 		
-		else if(mes>0 || mes < 12){
+		if(mes>0 || mes < 12){
 			cierto="Correcto";
 		}
 		return cierto;
@@ -139,18 +139,18 @@ public class Comprobar {
 			System.out.println("ERROR AL INTRODUCIR AÑO");
 			cierto="Correcto";
 		}
-		else if(año>2017){
+		if(año>2017){
 			cierto="Correcto";
 		}
 		return cierto;
 	}
 	public String comprobarCVV(int CVV){
 		String cierto="";
-		if(Integer.toString(CVV).length()!=3 || CVV<0 || CVV>999){
+		if(Integer.toString(CVV).length()!=3 || CVV<0 ){
 			System.out.println("ERROR AL INTRODUCIR CVV");
 			cierto="Correcto";
 		}
-		else if(Integer.toString(CVV).length()==3 || CVV>0 || CVV<999){
+		if(Integer.toString(CVV).length()==3 || CVV>0 || CVV<999){
 			cierto="Correcto";
 		}
 		return cierto;
@@ -161,7 +161,7 @@ public class Comprobar {
 	 public static boolean  Autenticar(String titular, long numtarj, String entidad, String fechacaducidad, int cVC) throws IOException
 	 {
 	     boolean result = false;
-	     ArrayList<Tarjeta> lista = leerTarjetas("\\Users\\artur\\Desktop\\Tarjetas.txt", numtarj);
+	     ArrayList<Tarjeta> lista = leerTarjetas("Tarjetas.txt", numtarj);
 	    
 	     for(int i=0; i< lista.size(); i++) {
 	         if(lista.get(i).getTitular().equals(titular) && lista.get(i).getNumTarjeta()==numtarj && lista.get(i).getFechaCaducidad().equals(fechacaducidad) && lista.get(i).getCodVerificacion()== cVC){
