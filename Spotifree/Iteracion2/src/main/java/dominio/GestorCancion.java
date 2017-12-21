@@ -16,6 +16,9 @@ import java.util.Scanner;
 public class GestorCancion {
 	private static String rutaFichero;
 
+	public static void setRutaFichero(String ruta) {
+		rutaFichero = ruta;
+	}
 	/**
 	 * 
 	 * @param
@@ -59,7 +62,7 @@ public class GestorCancion {
 	 * 
 	 * @param
 	 */
-	public void modificarCancion(Cancion lacancion) {
+	public void modificarCancion(Cancion lacancion) throws IOException {
 		//
 	}
 
