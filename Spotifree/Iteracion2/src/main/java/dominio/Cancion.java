@@ -83,6 +83,11 @@ public class Cancion {
 		this.precio = precio;
 	}
 
+	public void añadirCancion() {
+		// crear gestor
+		// 
+	}
+	
 	public void borrar(){
 		setAlbum(null);
 		setArtista(null);
@@ -92,4 +97,13 @@ public class Cancion {
 		setNombre(null);
 		setPrecio(0);
 	}
+	
+//	@Override
+//	public boolean equals(Object other){
+//	    if (other == null) return false;
+//	    if (other == this) return true;
+//	    if (!(other.getClass() != this.getClass()))return false;
+//	    Cancion otherCancion = (Cancion)other;
+//	    return otherCancion.getId() == id;
+//	}	
 }
