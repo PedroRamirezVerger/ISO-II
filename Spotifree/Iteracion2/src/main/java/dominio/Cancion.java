@@ -36,6 +36,9 @@ public class Cancion {
 	}
 
 	public void setDuracion(int duracion) {
+		if (duracion <= 0) {
+			throw new IllegalArgumentException("Duración no positiva en canción");
+		}
 		this.duracion = duracion;
 	}
 
@@ -52,6 +55,9 @@ public class Cancion {
 	}
 
 	public void setNombre(String nombre) {
+		if (nombre.isEmpty() || nombre.length() > 255) {
+			throw new IllegalArgumentException("Nombre de canción excede 255 caracteres");
+		}
 		this.nombre = nombre;
 	}
 
@@ -60,6 +66,9 @@ public class Cancion {
 	}
 
 	public void setEstilo(String estilo) {
+		if (estilo.isEmpty() || estilo.length() > 255) {
+			throw new IllegalArgumentException("Estilo de canción excede 255 caracteres");
+		}
 		this.estilo = estilo;
 	}
 
@@ -84,6 +93,9 @@ public class Cancion {
 	}
 
 	public void setPrecio(double precio) {
+		if (precio < 0) {
+			throw new IllegalArgumentException("Precio de canción negativo");
+		}
 		this.precio = precio;
 	}
 

@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -29,6 +30,7 @@ public class GestorCancion {
 	public void leerCancion(Cancion lacancion) throws IOException {
 		Scanner lector = new Scanner(new File(rutaFichero), "utf-8");
 		lector.useDelimiter(";");
+		lector.useLocale(Locale.US);
 		boolean encontrado = false;
 		while (lector.hasNextInt()) {
 			if (lector.nextInt() == lacancion.getId()) {
@@ -60,13 +62,9 @@ public class GestorCancion {
 		}
 	}
 
-	/**
-	 * 
-	 * @param
-	 */
-	public void modificarCancion(Cancion lacancion) throws IOException {
-		//
-	}
+//	public void modificarCancion(Cancion lacancion) throws IOException {
+//		//
+//	}
 
 	// public ArrayList<Cancion> leerCancionInteractivo(ArrayList<Cancion> can,
 	// ArrayList<Artista> art,ArrayList<Album> alb){
