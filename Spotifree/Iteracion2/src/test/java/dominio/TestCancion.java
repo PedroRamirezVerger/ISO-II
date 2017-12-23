@@ -142,7 +142,7 @@ public class TestCancion {
 	@Test
 	public void testDuracionInvalid1() {
 		int id=1;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 			fail();
@@ -157,7 +157,7 @@ public class TestCancion {
 	@Test
 	public void testDuracionInvalid2() {
 		int id=2;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 			fail();
@@ -172,7 +172,7 @@ public class TestCancion {
 	@Test
 	public void testDuracionValid3() {
 		int id=3;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -188,7 +188,7 @@ public class TestCancion {
 	@Test
 	public void testDuracionInvalid4() {
 		int id=4;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 			fail();
@@ -203,7 +203,7 @@ public class TestCancion {
 	@Test
 	public void testDuracionValid5() {
 		int id=5;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -219,7 +219,7 @@ public class TestCancion {
 	@Test
 	public void testDuracionValid6() {
 		int id=6;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -235,7 +235,7 @@ public class TestCancion {
 	@Test
 	public void testNombreInvalid1() {
 		int id=7;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 			fail();
@@ -250,7 +250,7 @@ public class TestCancion {
 	@Test
 	public void testNombreValid2() {
 		int id=8;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -266,7 +266,7 @@ public class TestCancion {
 	@Test
 	public void testNombreValid3() {
 		int id=9;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -282,7 +282,7 @@ public class TestCancion {
 	@Test
 	public void testNombreValid4() {
 		int id=10;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -298,7 +298,7 @@ public class TestCancion {
 	@Test
 	public void testNombreInvalid5() {
 		int id=11;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 			fail();
@@ -313,7 +313,7 @@ public class TestCancion {
 	@Test
 	public void testEstiloInvalid1() {
 		int id=12;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 			fail();
@@ -328,7 +328,7 @@ public class TestCancion {
 	@Test
 	public void testEstiloValid2() {
 		int id=13;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -344,7 +344,7 @@ public class TestCancion {
 	@Test
 	public void testEstiloValid3() {
 		int id=14;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -360,7 +360,7 @@ public class TestCancion {
 	@Test
 	public void testEstiloValid4() {
 		int id=15;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -376,7 +376,7 @@ public class TestCancion {
 	@Test
 	public void testEstiloInvalid5() {
 		int id=16;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 			fail();
@@ -391,7 +391,7 @@ public class TestCancion {
 	@Test
 	public void testArtistaInvalid1() {
 		int id=17;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 			fail();
@@ -406,7 +406,7 @@ public class TestCancion {
 	@Test
 	public void testArtistaValid2() {
 		int id=18;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -422,7 +422,7 @@ public class TestCancion {
 	@Test
 	public void testArtistaValid3() {
 		int id=19;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -438,7 +438,7 @@ public class TestCancion {
 	@Test
 	public void testArtistaValid4() {
 		int id=20;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -454,7 +454,7 @@ public class TestCancion {
 	@Test
 	public void testArtistaInvalid5() {
 		int id=21;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 			fail();
@@ -469,7 +469,7 @@ public class TestCancion {
 	@Test
 	public void testAlbumInvalid1() {
 		int id=22;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 			fail();
@@ -484,7 +484,7 @@ public class TestCancion {
 	@Test
 	public void testAlbumValid2() {
 		int id=23;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -500,7 +500,7 @@ public class TestCancion {
 	@Test
 	public void testAlbumValid3() {
 		int id=24;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -516,7 +516,7 @@ public class TestCancion {
 	@Test
 	public void testAlbumValid4() {
 		int id=25;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -532,7 +532,7 @@ public class TestCancion {
 	@Test
 	public void testAlbumInvalid5() {
 		int id=26;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 			fail();
@@ -547,7 +547,7 @@ public class TestCancion {
 	@Test
 	public void testPrecioInvalid1() {
 		int id=27;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 			fail();
@@ -562,7 +562,7 @@ public class TestCancion {
 	@Test
 	public void testPrecioValid2() {
 		int id=28;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -578,7 +578,7 @@ public class TestCancion {
 	@Test
 	public void testPrecioValid3() {
 		int id=29;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -594,7 +594,7 @@ public class TestCancion {
 	@Test
 	public void testPrecioValid4() {
 		int id=30;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -610,7 +610,7 @@ public class TestCancion {
 	@Test
 	public void testPrecioValid5() {
 		int id=31;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -626,7 +626,7 @@ public class TestCancion {
 	@Test
 	public void testPrecioValid6() {
 		int id=32;
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {
 			canciontest.leer();
 		} catch (IOException inesperada) {
@@ -637,6 +637,8 @@ public class TestCancion {
 			fail();
 		}
 	}
+
+
 
 	
 }

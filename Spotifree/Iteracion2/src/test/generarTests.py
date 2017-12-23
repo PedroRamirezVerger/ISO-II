@@ -20,7 +20,7 @@ oraculoOK = '''
 	@Test
 	public void test{}() {{
 		int id={};
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {{
 			canciontest.leer();
 		}} catch (IOException inesperada) {{
@@ -37,7 +37,7 @@ oraculoFail = '''
 	@Test
 	public void test{}() {{
 		int id={};
-		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		Cancion canciontest = new Cancion(0, id, null, null, null, null, 0);
 		try {{
 			canciontest.leer();
 			fail();
