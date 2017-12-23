@@ -81,19 +81,19 @@ for i in range(len(casos_estilo)):
 
 base += len(casos_estilo)
 
-for i in range(len(casos_artista)):
-    if i in indices_artista_ok:
-        print(oraculoOK.format("ArtistaValid" + str(i+1), base+i+1))
-    else:
-        print(oraculoFail.format("ArtistaInvalid" + str(i+1), base+i+1))
+#for i in range(len(casos_artista)):
+#    if i in indices_artista_ok:
+#        print(oraculoOK.format("ArtistaValid" + str(i+1), base+i+1))
+#    else:
+#        print(oraculoFail.format("ArtistaInvalid" + str(i+1), base+i+1))
 
 base += len(casos_artista)
 
-for i in range(len(casos_album)):
-    if i in indices_album_ok:
-        print(oraculoOK.format("AlbumValid" + str(i+1), base+i+1))
-    else:
-        print(oraculoFail.format("AlbumInvalid" + str(i+1), base+i+1))
+#for i in range(len(casos_album)):
+#    if i in indices_album_ok:
+#        print(oraculoOK.format("AlbumValid" + str(i+1), base+i+1))
+#    else:
+#        print(oraculoFail.format("AlbumInvalid" + str(i+1), base+i+1))
 
 base += len(casos_album)
 
