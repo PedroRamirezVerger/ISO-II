@@ -63,3 +63,47 @@ for i in range(len(casos_duracion)):
     else:
         print(oraculoFail.format("DuracionInvalid" + str(i+1), i+1))
 
+base = len(casos_duracion)
+
+for i in range(len(casos_nombre)):
+    if i in indices_nombre_ok:
+        print(oraculoOK.format("NombreValid" + str(i+1), base+i+1))
+    else:
+        print(oraculoFail.format("NombreInvalid" + str(i+1), base+i+1))
+
+base += len(casos_nombre)
+
+for i in range(len(casos_estilo)):
+    if i in indices_estilo_ok:
+        print(oraculoOK.format("EstiloValid" + str(i+1), base+i+1))
+    else:
+        print(oraculoFail.format("EstiloInvalid" + str(i+1), base+i+1))
+
+base += len(casos_estilo)
+
+for i in range(len(casos_artista)):
+    if i in indices_artista_ok:
+        print(oraculoOK.format("ArtistaValid" + str(i+1), base+i+1))
+    else:
+        print(oraculoFail.format("ArtistaInvalid" + str(i+1), base+i+1))
+
+base += len(casos_artista)
+
+for i in range(len(casos_album)):
+    if i in indices_album_ok:
+        print(oraculoOK.format("AlbumValid" + str(i+1), base+i+1))
+    else:
+        print(oraculoFail.format("AlbumInvalid" + str(i+1), base+i+1))
+
+base += len(casos_album)
+
+for i in range(len(casos_precio)):
+    if i in indices_precio_ok:
+        print(oraculoOK.format("PrecioValid" + str(i+1), base+i+1))
+    else:
+        print(oraculoFail.format("PrecioInvalid" + str(i+1), base+i+1))
+
+
+
+
+

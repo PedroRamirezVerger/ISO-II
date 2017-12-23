@@ -9,7 +9,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class TestCancion {
@@ -38,8 +40,8 @@ public class TestCancion {
 	private static String[] casos_precio = {"-1", "0", "1", "5.5", "30", "31"};
 
 	
-	@Before
-	public void setup() {
+	@BeforeClass
+	public static void setup() {
 		// id;duracion;nombre;estilo;artista;album;precio
 		try {
 			fichero_test = File.createTempFile("test-canciones", ".csv");
@@ -50,14 +52,14 @@ public class TestCancion {
 		GestorCancion.setRutaFichero(fichero_test.getAbsolutePath());
 		PrintWriter writer = null;
 		 try {
-			 writer = new PrintWriter(new BufferedWriter(new FileWriter(fichero_test)));
+			 writer = new PrintWriter(new BufferedWriter(new FileWriter(fichero_test)), true);
 		} catch (IOException e) {
 			e.printStackTrace();
 			assert(false);
 		}
 		// casos para probar duración
 		for (int i=0; i < casos_duracion.length; i++) {
-			writer.println((i + 1) 
+			writer.println((i + 1) + ";"
 			+ casos_duracion[i] + ";"
 			+ nombre_normal + ";"
 			+ estilo_normal + ";"
@@ -68,7 +70,7 @@ public class TestCancion {
 		int base = casos_duracion.length;
 		// casos para probar nombre
 		for (int i=0; i < casos_nombre.length; i++) {
-			writer.println((base + i + 1) 
+			writer.println((base + i + 1) + ";"
 			+ duracion_normal + ";"
 			+ casos_nombre[i] + ";"
 			+ estilo_normal + ";"
@@ -79,7 +81,7 @@ public class TestCancion {
 		// casos para probar estilo
 		base += casos_nombre.length;
 		for (int i=0; i < casos_estilo.length; i++) {
-			writer.println((base + i + 1) 
+			writer.println((base + i + 1) + ";"
 			+ duracion_normal + ";"
 			+ nombre_normal + ";"
 			+ casos_estilo[i] + ";"
@@ -91,7 +93,7 @@ public class TestCancion {
 		// casos para probar artista
 		base += casos_artista.length;
 		for (int i=0; i < casos_estilo.length; i++) {
-			writer.println((base + i + 1) 
+			writer.println((base + i + 1) + ";"
 			+ duracion_normal + ";"
 			+ nombre_normal + ";"
 			+ estilo_normal + ";"
@@ -102,7 +104,7 @@ public class TestCancion {
 		base += casos_artista.length;
 		// casos para probar album
 		for (int i=0; i < casos_album.length; i++) {
-			writer.println((base + i + 1) 
+			writer.println((base + i + 1) + ";"
 			+ duracion_normal + ";"
 			+ nombre_normal + ";"
 			+ estilo_normal + ";"
@@ -113,7 +115,7 @@ public class TestCancion {
 		base += casos_album.length;
 		// casos para probar precio
 		for (int i=0; i < casos_precio.length; i++) {
-			writer.println((base + i + 1) 
+			writer.println((base + i + 1) + ";"
 			+ duracion_normal + ";"
 			+ nombre_normal + ";"
 			+ estilo_normal + ";"
@@ -121,11 +123,18 @@ public class TestCancion {
 			+ album_normal + ";"
 			+ casos_precio[i]  + ";");
 		}
-
+		writer.flush();
+		writer.close();
 	}
 
-	@After
-	public void tearDown() {
+	@Before
+	public void setUpTest() {
+		GestorCancion.setRutaFichero(fichero_test.getAbsolutePath());
+
+	}
+	
+	@AfterClass
+	public static void tearDown() {
 		fichero_test.deleteOnExit();
 	}
 	
@@ -222,6 +231,412 @@ public class TestCancion {
 		}
 	}
 
+
+	@Test
+	public void testNombreInvalid1() {
+		int id=7;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+			fail();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception esperada) {
+		}
+	}
+
+
+	@Test
+	public void testNombreValid2() {
+		int id=8;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		}
+	}
+
+
+	@Test
+	public void testNombreValid3() {
+		int id=9;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		}
+	}
+
+
+	@Test
+	public void testNombreValid4() {
+		int id=10;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		}
+	}
+
+
+	@Test
+	public void testNombreInvalid5() {
+		int id=11;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+			fail();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception esperada) {
+		}
+	}
+
+
+	@Test
+	public void testEstiloInvalid1() {
+		int id=12;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+			fail();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception esperada) {
+		}
+	}
+
+
+	@Test
+	public void testEstiloValid2() {
+		int id=13;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		}
+	}
+
+
+	@Test
+	public void testEstiloValid3() {
+		int id=14;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		}
+	}
+
+
+	@Test
+	public void testEstiloValid4() {
+		int id=15;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		}
+	}
+
+
+	@Test
+	public void testEstiloInvalid5() {
+		int id=16;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+			fail();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception esperada) {
+		}
+	}
+
+
+	@Test
+	public void testArtistaInvalid1() {
+		int id=17;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+			fail();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception esperada) {
+		}
+	}
+
+
+	@Test
+	public void testArtistaValid2() {
+		int id=18;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		}
+	}
+
+
+	@Test
+	public void testArtistaValid3() {
+		int id=19;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		}
+	}
+
+
+	@Test
+	public void testArtistaValid4() {
+		int id=20;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		}
+	}
+
+
+	@Test
+	public void testArtistaInvalid5() {
+		int id=21;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+			fail();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception esperada) {
+		}
+	}
+
+
+	@Test
+	public void testAlbumInvalid1() {
+		int id=22;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+			fail();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception esperada) {
+		}
+	}
+
+
+	@Test
+	public void testAlbumValid2() {
+		int id=23;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		}
+	}
+
+
+	@Test
+	public void testAlbumValid3() {
+		int id=24;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		}
+	}
+
+
+	@Test
+	public void testAlbumValid4() {
+		int id=25;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		}
+	}
+
+
+	@Test
+	public void testAlbumInvalid5() {
+		int id=26;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+			fail();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception esperada) {
+		}
+	}
+
+
+	@Test
+	public void testPrecioInvalid1() {
+		int id=27;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+			fail();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception esperada) {
+		}
+	}
+
+
+	@Test
+	public void testPrecioValid2() {
+		int id=28;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		}
+	}
+
+
+	@Test
+	public void testPrecioValid3() {
+		int id=29;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		}
+	}
+
+
+	@Test
+	public void testPrecioValid4() {
+		int id=30;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		}
+	}
+
+
+	@Test
+	public void testPrecioValid5() {
+		int id=31;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		}
+	}
+
+
+	@Test
+	public void testPrecioValid6() {
+		int id=32;
+		Cancion canciontest = new Cancion(id, 0, null, null, null, null, 0);
+		try {
+			canciontest.leer();
+		} catch (IOException inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		} catch (Exception inesperada) {
+			inesperada.printStackTrace();
+			fail();
+		}
+	}
 
 	
 }

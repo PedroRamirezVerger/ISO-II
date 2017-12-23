@@ -53,7 +53,9 @@ public class GestorCancion {
 			lacancion.setPrecio(precio);
 			lacancion.setAlbum(album);
 			lacancion.setArtista(artista);
+			lector.close();
 		} else {
+			lector.close();
 			throw new IOException("La canción no se encuentra en el fichero: " + lacancion.toString());
 		}
 	}
