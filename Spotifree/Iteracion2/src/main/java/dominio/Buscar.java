@@ -21,7 +21,7 @@ public class Buscar {
 		int i;
 		for(i=0;i<can.size();i++){
 			name=can.get(i).getNombre();
-			if (name == nombre) {
+			if (name.equals(nombre)) {
 				cancion=can.get(i);
 			} 
 		}
