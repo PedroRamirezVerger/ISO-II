@@ -91,8 +91,7 @@ public class TestCancion {
 		}
 		base += casos_estilo.length;
 		// casos para probar artista
-		base += casos_artista.length;
-		for (int i=0; i < casos_estilo.length; i++) {
+		for (int i=0; i < casos_artista.length; i++) {
 			writer.println((base + i + 1) + ";"
 			+ duracion_normal + ";"
 			+ nombre_normal + ";"
