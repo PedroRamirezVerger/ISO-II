@@ -88,7 +88,7 @@ public class Comprobar {
 	}
 	public String comprobartarjeta(Long numtarj){
 		String cierto="";
-		if(numtarj.toString().length() !=16 || numtarj<0 || numtarj>9999999999999999L){
+		if(numtarj.toString().length() !=16 ){
 			System.out.println("ERROR AL INTRODUCIR NUMERO TARJETA");
 			cierto="Correcto";
 		}
@@ -144,9 +144,9 @@ public class Comprobar {
 		}
 		return cierto;
 	}
-	public String comprobarCVV(int CVV){
+	public String comproCVV(int CVV){
 		String cierto="";
-		if(Integer.toString(CVV).length()!=3 || CVV<0 ){
+		if(Integer.toString(CVV).length()!=3 || CVV<100 || CVV>999 ){
 			System.out.println("ERROR AL INTRODUCIR CVV");
 			cierto="Correcto";
 		}

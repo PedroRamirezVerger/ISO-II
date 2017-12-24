@@ -57,7 +57,7 @@ public class AppTest
     	assertEquals(expected,h.comprobardia(dia));
     	assertEquals(expected,h.comprobarmes(mes));
     	assertEquals(expected,h.comprobaraño(año));
-    	assertEquals(expected,h.comprobarCVV(CVV));
+    	assertEquals(expected,h.comproCVV(CVV));
     	
     }
     @org.junit.Test
@@ -75,7 +75,7 @@ public class AppTest
     	assertEquals(expected,h.comprobardia(dia));
     	assertEquals(expected,h.comprobarmes(mes));
     	assertEquals(expected,h.comprobaraño(año));
-    	assertEquals(expected,h.comprobarCVV(CVV));
+    	assertEquals(expected,h.comproCVV(CVV));
     	
     }
     @org.junit.Test
@@ -99,7 +99,7 @@ public class AppTest
     	assertEquals(expected,h.comprobardia(dia));
     	assertEquals(expected,h.comprobarmes(mes));
     	assertEquals(expected,h.comprobaraño(año));
-    	assertEquals(expected,h.comprobarCVV(CVV));
+    	assertEquals(expected,h.comproCVV(CVV));
     	//assertEquals(clientes, h.leerClientes("TestUsuarios", "Tarjeta.txt"));
     }
     @org.junit.Test
@@ -117,7 +117,7 @@ public class AppTest
     	assertEquals(expected,h.comprobardia(dia));
     	assertEquals(expected,h.comprobarmes(mes));
     	assertEquals(expected,h.comprobaraño(año));
-    	assertEquals(expected,h.comprobarCVV(CVV));
+    	assertEquals(expected,h.comproCVV(CVV));
     	
     }
     @org.junit.Test
@@ -135,7 +135,7 @@ public class AppTest
     	assertEquals(expected,h.comprobardia(dia));
     	assertEquals(expected,h.comprobarmes(mes));
     	assertEquals(expected,h.comprobaraño(año));
-    	assertEquals(expected,h.comprobarCVV(CVV));
+    	assertEquals(expected,h.comproCVV(CVV));
     	
     }
     @org.junit.Test
@@ -153,29 +153,11 @@ public class AppTest
     	assertEquals(expected,h.comprobardia(dia));
     	assertEquals(expected,h.comprobarmes(mes));
     	assertEquals(expected,h.comprobaraño(año));
-    	assertEquals(expected,h.comprobarCVV(CVV));
+    	assertEquals(expected,h.comproCVV(CVV));
     	
     }
     @org.junit.Test
     public void testcomprobar6(){
-    	String titular= "abcde";
-    	Long numtarj= 1658963254789852L;
-    	String entidad="abcde";
-    	int dia=15;
-    	int mes=11;
-    	int año=2017;
-    	int CVV=5555;
-    	assertEquals(expected,h.comprobartitular(titular));
-    	assertEquals(expected,h.comprobartarjeta(numtarj));
-    	assertEquals(expected,h.comprobarentidad(entidad));
-    	assertEquals(expected,h.comprobardia(dia));
-    	assertEquals(expected,h.comprobarmes(mes));
-    	assertEquals(expected,h.comprobaraño(año));
-    	assertEquals(expected,h.comprobarCVV(CVV));
-    	
-    }
-    @org.junit.Test
-    public void testcomprobar7(){
     	String titular= " ";
     	Long numtarj= 1655554589632587L;
     	String entidad="abcde";
@@ -189,29 +171,29 @@ public class AppTest
     	assertEquals(expected,h.comprobardia(dia));
     	assertEquals(expected,h.comprobarmes(mes));
     	assertEquals(expected,h.comprobaraño(año));
-    	assertEquals(expected,h.comprobarCVV(CVV));
+    	assertEquals(expected,h.comproCVV(CVV));
     	
     }
     @org.junit.Test
-    public void testcomprobar8(){
+    public void testcomprobar7(){
     	String titular= "abcde";
-    	Long numtarj= 2L;
+    	Long numtarj= 45552L;
     	String entidad="abcde";
-    	int dia=27;
-    	int mes=7;
-    	int año=2019;
-    	int CVV=557;
+    	int dia=12;
+    	int mes=14;
+    	int año=2018;
+    	int CVV=555;
     	assertEquals(expected,h.comprobartitular(titular));
     	assertEquals(expected,h.comprobartarjeta(numtarj));
     	assertEquals(expected,h.comprobarentidad(entidad));
     	assertEquals(expected,h.comprobardia(dia));
     	assertEquals(expected,h.comprobarmes(mes));
     	assertEquals(expected,h.comprobaraño(año));
-    	assertEquals(expected,h.comprobarCVV(CVV));
+    	assertEquals(expected,h.comproCVV(CVV));
     	
     }
     @org.junit.Test
-    public void testcomprobar9() throws IOException{
+    public void testcomprobar8() throws IOException{
     	/*ArrayList<Cliente> clientes = new ArrayList<Cliente>();
     	ArrayList<Tarjeta> tarjetas = new ArrayList<Tarjeta>();
     	tarjetas = h.leerTarjetas("Tarjeta.txt", 6301287877099260l);
@@ -231,11 +213,11 @@ public class AppTest
     	assertEquals(expected,h.comprobardia(dia));
     	assertEquals(expected,h.comprobarmes(mes));
     	assertEquals(expected,h.comprobaraño(año));
-    	assertEquals(expected,h.comprobarCVV(CVV));
+    	assertEquals(expected,h.comproCVV(CVV));
     	//assertEquals(clientes, h.leerClientes("TestUsuarios", "Tarjeta.txt"));
     }
     @org.junit.Test
-    public void testcomprobar10(){
+    public void testcomprobar9(){
     	String titular= "abcde";
     	Long numtarj= 1658963254789852L;
     	String entidad="abcde";
@@ -249,11 +231,11 @@ public class AppTest
     	assertEquals(expected,h.comprobardia(dia));
     	assertEquals(expected,h.comprobarmes(mes));
     	assertEquals(expected,h.comprobaraño(año));
-    	assertEquals(expected,h.comprobarCVV(CVV));
+    	assertEquals(expected,h.comproCVV(CVV));
     	
     }
     @org.junit.Test
-    public void testcomprobar11(){
+    public void testcomprobar10(){
     	String titular= "abcde";
     	Long numtarj= 1658963254789852L;
     	String entidad="abcde";
@@ -267,27 +249,10 @@ public class AppTest
     	assertEquals(expected,h.comprobardia(dia));
     	assertEquals(expected,h.comprobarmes(mes));
     	assertEquals(expected,h.comprobaraño(año));
-    	assertEquals(expected,h.comprobarCVV(CVV));
+    	assertEquals(expected,h.comproCVV(CVV));
     	
     }
     
-    @org.junit.Test
-    public void testcomprobar13(){
-    	String titular= "abcde";
-    	Long numtarj= 1658963254789852L;
-    	String entidad="abcde";
-    	int dia=15;
-    	int mes=11;
-    	int año=2017;
-    	int CVV=55;
-    	assertEquals(expected,h.comprobartitular(titular));
-    	assertEquals(expected,h.comprobartarjeta(numtarj));
-    	assertEquals(expected,h.comprobarentidad(entidad));
-    	assertEquals(expected,h.comprobardia(dia));
-    	assertEquals(expected,h.comprobarmes(mes));
-    	assertEquals(expected,h.comprobaraño(año));
-    	assertEquals(expected,h.comprobarCVV(CVV));
-    	
-    }
+    
 }
     
