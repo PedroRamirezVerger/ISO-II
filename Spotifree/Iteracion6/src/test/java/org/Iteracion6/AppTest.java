@@ -13,11 +13,6 @@ import dominio.Usuario;
  */
 public class AppTest {
 	Usuario user;
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
 	@Before
 	public void setUp() throws Exception {
 		user = new Usuario("Mandarina", "guayabita", 1234567887654321L, "Baguette", "Mandarina Lopez Lopez de Verger Lopez");
