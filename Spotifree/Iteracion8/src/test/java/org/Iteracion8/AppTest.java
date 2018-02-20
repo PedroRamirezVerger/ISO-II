@@ -17,27 +17,16 @@ import org.junit.Before;
 
 import junit.framework.*;
 
-/**
- * Unit test for simple App.
- */
 public class AppTest 
     
 {
 	private Comprobar h;
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
 	String expected="Correcto";
    
     @Before
 	public void setUp() throws Exception {
 		h = new Comprobar();
 	}
-    /**
-     * @return the suite of tests being tested
-     */
     @After
 	public void tearDown() {
 	}
