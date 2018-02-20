@@ -1,34 +1,19 @@
 package dominio;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
-/**
- * 
- *
- *
- */
 public class GestorCancion {
 	private static String rutaFichero;
 
-	public static void setRutaFichero(String ruta) {
+	public static void setRutaFichero(final String ruta) {
 		rutaFichero = ruta;
 	}
-	/**
-	 * 
-	 * @param
-	 * @return
-	 * @throws FileNotFoundException
-	 * 
-	 **/
-	public void leerCancion(Cancion lacancion) throws IOException {
-		Scanner lector = new Scanner(new File(rutaFichero), "utf-8");
+
+	public void leerCancion(final Cancion lacancion) throws IOException {
+		final Scanner lector = new Scanner(new File(rutaFichero), "utf-8");
 		lector.useDelimiter(";");
 		lector.useLocale(Locale.US);
 		boolean encontrado = false;
@@ -40,14 +25,16 @@ public class GestorCancion {
 			lector.nextLine();
 		}
 		if (encontrado) {
-			int duracion = Integer.parseInt(lector.next());
-			String nombre = lector.next();
-			String estilo = lector.next();
-			String artistastr = lector.next();
-			Artista artista = null;
-			String albumstr = lector.next();
-			Album album = null;
-			double precio = lector.nextDouble();
+			final int duracion = Integer.parseInt(lector.next());
+			final String nombre = lector.next();
+			final String estilo = lector.next();
+			//final String artistastr = lector.next();
+            lector.next(); // artistastr sin usar
+			final Artista artista = null;
+			//final String albumstr = lector.next();
+            lector.next(); // albumstr sin usar
+			final Album album = null;
+			final double precio = lector.nextDouble();
 
 			lacancion.setDuracion(duracion);
 			lacancion.setNombre(nombre);

@@ -15,18 +15,18 @@ public class Buscar {
 		return encontrado;
 	}
 	
-	public Cancion buscarcancion(ArrayList<Cancion> can, String nombre){
+	public Cancion buscarcancion(final ArrayList<Cancion> can, final String nombre){
 		String name;
-		Cancion cancion=null;
-		int i;
-		for(i=0;i<can.size();i++){
+		Cancion cancion = null;
+		for(int i=0;i<can.size();i++){
 			name=can.get(i).getNombre();
 			if (name.equals(nombre)) {
 				cancion=can.get(i);
-			} 
+			}
 		}
 		return cancion;
 	}
+
 	public Artista buscarcancionArtista(ArrayList<Cancion> can, String nombre) {
 		String name;
 		Artista art=null;
@@ -39,6 +39,7 @@ public class Buscar {
 		}
 		return art;
 	}
+
 	public Album buscarcancionAlbum(ArrayList<Cancion> can, String nombre) {
 		String name;
 		Album art=null;
@@ -51,6 +52,7 @@ public class Buscar {
 		}
 		return art;
 	}
+
 	public Artista buscarArtista(ArrayList<Artista> art, String nombre){
 		Artista artista=null;
 		int i;
@@ -63,6 +65,7 @@ public class Buscar {
 		}
 		return artista;
 	}
+
 	public Album buscarAlbum(ArrayList<Album> alb, String nombre){
 		Album albu=null;
 		int i;
