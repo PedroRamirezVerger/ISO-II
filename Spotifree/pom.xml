@@ -155,13 +155,7 @@
 		</dependency>
 	</dependencies>
 	<modules>
-		<module>Iteracion2</module>
-		<module>Iteracion3</module>
-		<module>Iteracion4</module>
-		<module>Iteracion5</module>
-		<module>Iteracion6</module>
-		<module>Iteracion7</module>
-		<module>Iteracion8</module>
+		<module>IteracionFinal</module>
 	</modules>
 	<organization>
 		<name>Squanch Development Media</name>
