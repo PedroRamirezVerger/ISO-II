@@ -1,10 +1,9 @@
-package org.Iteracion5;
 
 import dominio.ReproductorFichero;
 /**
  *
  */
-public class App 
+public class ReproductorApp
 {
     public static void main( String[] args )
     {

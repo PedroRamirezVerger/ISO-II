@@ -1,4 +1,5 @@
-package org.Iteracion8;
+package dominio;
+
 public class Tarjeta {
 	private long num_tarjeta; // N�mero de la tarjeta de cr�dito
     private String titular; // Titular de la tarjeta de cr�dito

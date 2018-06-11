@@ -1,4 +1,5 @@
-package org.Iteracion8;
+package dominio;
+
 	public class Fecha {
 	    private int dia;
 	    private int mes;
