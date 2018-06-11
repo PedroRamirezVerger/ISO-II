@@ -1,15 +1,12 @@
 package dominio;
 
 public class Usuario {
-	/**
-	 * comentario de mierda
-	 */
 	private String nombreUser;
 	private String pass;
 	private Long tarjCredito;
-	private int longTarjAdecuada;
-	private int longContraseña;
-	private int longCadenaLarga;
+	private static final int longTarjAdecuada = 16;
+	private static final int longContraseña = 16;
+	private static final int longCadenaLarga = 255;
 	private String pais;
 	private String nombreCompleto;
 	private boolean userValido = false, passValido = false, tarjValido = false, paisValido = false,
@@ -71,7 +68,7 @@ public class Usuario {
 		this.setCompleto(null);
 	}
 
-	public boolean comprobarUser(String nombreUser, int longCadenaLarga) {
+	public boolean comprobarUser(String nombreUser) {
 		if (nombreUser.length() > 0 && nombreUser.length() < longCadenaLarga) {
 			userValido = true;
 		} else {
@@ -81,7 +78,7 @@ public class Usuario {
 		return userValido;
 	}
 
-	public boolean comprobarPass(String pass, int longContraseña) {
+	public boolean comprobarPass(String pass) {
 		if (pass.length() > 0 && pass.length() < longContraseña) {
 			passValido = true;
 		} else {
@@ -91,7 +88,7 @@ public class Usuario {
 		return passValido;
 	}
 
-	public boolean comprobarTarj(Long tarjCredito, int longTarjAdecuada) {
+	public boolean comprobarTarj(Long tarjCredito) {
 		if (tarjCredito.toString().length() == longTarjAdecuada) {
 			tarjValido = true;
 		} else {
@@ -101,7 +98,7 @@ public class Usuario {
 		return tarjValido;
 	}
 
-	public boolean comprobarCompleto(String nombreCompleto, int longCadenaLarga) {
+	public boolean comprobarCompleto(String nombreCompleto) {
 		if (nombreCompleto.length() > 0 && nombreCompleto.length() < longCadenaLarga) {
 			completoValido = true;
 		} else {
@@ -111,7 +108,7 @@ public class Usuario {
 		return completoValido;
 	}
 
-	public boolean comprobarPais(String pais, int longCadenaLarga) {
+	public boolean comprobarPais(String pais) {
 		if (pais.length() > 0 && pais.length() < longCadenaLarga) {
 			paisValido = true;
 		} else {

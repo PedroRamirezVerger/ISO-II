@@ -9,7 +9,7 @@ public class Album {
 	private String nombre;
 	private double precio;
 	private Artista Artista;
-	public Album(ArrayList<Cancion> canciones, int id, String nombre, double precio, dominio.Artista artista) {
+	public Album(ArrayList<Cancion> canciones, int id, String nombre, double precio, Artista artista) {
 		super();
 		this.canciones = canciones;
 		this.id = id;

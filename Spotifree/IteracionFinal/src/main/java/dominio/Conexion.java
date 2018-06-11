@@ -13,7 +13,11 @@ public class Conexion {
 	public boolean conectar(Servidor s, Cliente c) {
 		return s.aceptarConexion(c);
 	}
+
+    /* roto
 	public void enviarMensaje(Cliente c, String m) {
 		c.imprimirMensaje(m);
 	}
+    */
+
 }

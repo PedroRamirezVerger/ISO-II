@@ -63,11 +63,11 @@ public void setEmail(String email) {
 	this.email = email;
 }
 
-	public boolean conectar(Servidor s) {
-		Cliente c=new Cliente();
-		Conexion conexion = new Conexion(c, s);
-		return conexion.conectar(s, c);
-	}
+//	public boolean conectar(Servidor s) {
+//		Cliente c=new Cliente();
+//		Conexion conexion = new Conexion(c, s);
+//		return conexion.conectar(s, c);
+//	}
 
 @Override
 public String toString() {

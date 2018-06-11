@@ -13,9 +13,13 @@ public class Servidor {
 		clientes.add(c);
 		return true;
 	}
+
+    /* roto
 	public void enviarMensaje(Cliente c, String m) {
 		Servidor s=new Servidor(clientes);
 		Conexion conexion=new Conexion(c, s);
 		conexion.enviarMensaje(c, m);
 	}
+    */
+
 }

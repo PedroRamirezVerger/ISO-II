@@ -291,11 +291,12 @@ public class Comprobar {
 				String estilo = nombre_f.next();
 				String artista1 = nombre_f.next();
 				String album1 = nombre_f.next();
+                String nombre = ""; // FIXME: roto
 				int duracion = nombre_f.nextInt();
 				double precio = nombre_f.nextDouble();
 				artista = leerArtistas(fichero_artistas, artista1);
 				album = leerAlbumes(fichero_albumes, album1);
-				cancion = new Cancion(id, cancion1, estilo, artista, album, duracion,precio);
+				cancion = new Cancion(duracion, id, nombre, estilo, artista, album, precio);
 				canciones.add(cancion);
 				}
 			nombre_f.close();
@@ -316,11 +317,13 @@ public class Comprobar {
 					String nombrealbum = nombre_f.next();
 		          if(nombrealbum == album1){
 		          seguir = false;
-				  String artista = nombre_f.next();
-				  String cancion = nombre_f.next();
+				  String artistastr = nombre_f.next(); //FIXME
+                  Artista artista = new Artista("", null, null);
+				  // String cancion = nombre_f.next(); FIXME: roto
+                  ArrayList<Cancion> canciones = new ArrayList();
 				  int id = nombre_f.nextInt();
 				  double precio = nombre_f.nextDouble();
-				  album = new Album(id, nombrealbum, cancion, precio, artista);
+				  album = new Album(canciones, id, nombrealbum, precio, artista);
 				     
 	                }
               else{
@@ -347,8 +350,9 @@ public class Comprobar {
 		          seguir = false;
 				  String nombrecancion = nombre_f.next();
 				  String nombrealbum = nombre_f.next();
-				  artista = new Artista(nombreartista, nombrecancion, nombrealbum);
-				     
+				  //FIXME: roto
+                  //artista = new Artista(nombreartista, nombrecancion, nombrealbum);
+				  artista = new Artista(nombreartista, null, null);
 	                }
               else{
                   nombre_f.nextLine();

@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class Login {
 
 
+    /* código roto
 	 public static ArrayList<Usuario> GetUsuarios() throws IOException{
 	            ArrayList<Usuario> lista = new ArrayList<Usuario>();
 	            String cadena;
@@ -24,9 +25,9 @@ public class Login {
 	            b.close();
 				return lista;
 	        }
-	        
+	        */
 	 
-	   
+	   /*
 	    public static boolean  Autenticar(String nombre, String password) throws IOException
 	    {
 	        boolean result = false;
@@ -42,6 +43,6 @@ public class Login {
 	       
 	        return result;
 	    }
-
+   */
 	   
 }

@@ -14,8 +14,9 @@ import java.util.Scanner;
 import org.junit.After;
 import org.junit.Before;
 
-
 import junit.framework.*;
+
+import dominio.Comprobar;
 
 public class AppTest 
     
