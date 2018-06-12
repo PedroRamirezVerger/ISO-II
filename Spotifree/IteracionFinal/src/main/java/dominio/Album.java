@@ -48,7 +48,5 @@ public class Album {
 		Artista = artista;
 	}
 
-	public int cancionNumero(int id) {
-		return canciones.indexOf(id);
-	}
+
 }

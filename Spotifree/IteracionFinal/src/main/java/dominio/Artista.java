@@ -34,11 +34,11 @@ public class Artista {
 	public static int buscarcancion(int id) {
 		int posicion=-1;
 		for (int i = 0; i < canciones.size(); i++) {
-			if (canciones.contains(id)) {
-				posicion=canciones.indexOf(id);
-			} 
+			if (canciones.get(i).getId()==id) {
+				posicion=i;
+			}
 		}
-		
+
 		return posicion;
 	}
 }
