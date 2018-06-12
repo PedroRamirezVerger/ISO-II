@@ -18,7 +18,7 @@ public class Comprobar {
 		int CVV;
         ArrayList<Cliente> clientes;
         clientes = leerClientes("\\Users\\artur\\Desktop\\Clientes.txt", "\\Users\\artur\\Desktop\\Tarjetas.txt");
-       
+
         Fecha fecha;
 		do {
         	System.out.println("Introduzca el nombre y apellidos de titular de la tarjeta");
@@ -40,7 +40,7 @@ public class Comprobar {
         	while(entidad.length()>255){
         		System.out.println("Error el nombre de la entidad a la que pertenece con un rango de 0 a 255 caracteres");
         		System.out.println("Introduzca la entidad a la que pertenece su tarjeta");
-            	entidad = sc.nextLine();	
+            	entidad = sc.nextLine();
         	}
         	System.out.println("Introduzca la fecha de caducidad de su tarjeta. Formato Dia/Mes/Año DD/MM/AA");
         	System.out.println("Introduzca el dia");
@@ -70,10 +70,10 @@ public class Comprobar {
         	while(Integer.toString(CVV).length()!=3 || CVV<0 || CVV>999){
         		System.out.println("Error introduzca el CVV de su tarjeta con un rango entre 000 y 999");
         		System.out.println("Introduzca el CVV de su tarjeta");
-            	CVV = sc.nextInt();	
+            	CVV = sc.nextInt();
         	}
-        	}while(Autenticar(titular, numtarj,entidad, fecha.getFecha(), CVV) ==  false); 
-        	
+        	}while(Autenticar(titular, numtarj,entidad, fecha.getFecha(), CVV) ==  false);
+
         }
 	public String comprobartitular(String titular){
 		String cierto="";
@@ -85,7 +85,7 @@ public class Comprobar {
 			cierto="Correcto";
 		}
 		return cierto;
-		
+
 	}
 	public String comprobartarjeta(Long numtarj){
 		String cierto="";
@@ -102,7 +102,7 @@ public class Comprobar {
 		String cierto="";
 		if(entidad.length()>255){
 			System.out.println("ERROR AL INTRODUCIR ENTIDAD");
-			cierto="Correcto";	
+			cierto="Correcto";
 		}
 		if(entidad.length()<255){
 			cierto="Correcto";
@@ -115,7 +115,7 @@ public class Comprobar {
 			System.out.println("ERROR AL INTRODUCIR DIA");
 			cierto="Correcto";
 		}
-		
+
 		if(dia<31 || dia>1){
 			cierto="Correcto";
 		}
@@ -127,8 +127,8 @@ public class Comprobar {
 			System.out.println("ERROR AL INTRODUCIR MES");
 			cierto="Correcto";
 		}
-		
-		
+
+
 		if(mes>0 || mes < 12){
 			cierto="Correcto";
 		}
@@ -156,14 +156,14 @@ public class Comprobar {
 		}
 		return cierto;
 	}
-	
-	
+
+
 
 	 public static boolean  Autenticar(String titular, long numtarj, String entidad, String fechacaducidad, int cVC) throws IOException
 	 {
 	     boolean result = false;
 	     ArrayList<Tarjeta> lista = leerTarjetas("Tarjetas.txt", numtarj);
-	    
+
 	     for(int i=0; i< lista.size(); i++) {
 	         if(lista.get(i).getTitular().equals(titular) && lista.get(i).getNumTarjeta()==numtarj && lista.get(i).getFechaCaducidad().equals(fechacaducidad) && lista.get(i).getCodVerificacion()== cVC){
 	             result = true;
@@ -172,9 +172,9 @@ public class Comprobar {
 	         }else{
 	        	 System.out.println("Datos introducidos incorrectamente");
 	         }
-	            
+
 	     }
-	    
+
 	     return result;
 	 }
 
@@ -315,7 +315,7 @@ public class Comprobar {
 			boolean seguir = true;
 			while (nombre_f.hasNext()) {
 					String nombrealbum = nombre_f.next();
-		          if(nombrealbum == album1){
+		          if(nombrealbum.equals(album1)){
 		          seguir = false;
 				  String artistastr = nombre_f.next(); //FIXME
                   Artista artista = new Artista("", null, null);
@@ -324,7 +324,7 @@ public class Comprobar {
 				  int id = nombre_f.nextInt();
 				  double precio = nombre_f.nextDouble();
 				  album = new Album(canciones, id, nombrealbum, precio, artista);
-				     
+
 	                }
               else{
                   nombre_f.nextLine();
@@ -334,7 +334,7 @@ public class Comprobar {
           }catch(Exception ex){
           	ex.printStackTrace();
           }
-        	return album;	
+        	return album;
 
 		  }
 
@@ -346,7 +346,7 @@ public class Comprobar {
 			boolean seguir = true;
 			while (nombre_f.hasNext()) {
 				String nombreartista = nombre_f.next();
-		          if(nombreartista == artista1){
+		          if(nombreartista.equals(artista1)){
 		          seguir = false;
 				  String nombrecancion = nombre_f.next();
 				  String nombrealbum = nombre_f.next();
@@ -362,14 +362,14 @@ public class Comprobar {
           }catch(Exception ex){
           	ex.printStackTrace();
           }
-        	return artista;	
+        	return artista;
 
 		  }
-    public Cancion BuscarCancion(int id){ 
+    public Cancion BuscarCancion(int id){
         Cancion c = null;
         boolean seguir = true;
-        for(int i = 0; i < canciones.size() && seguir; i++){ 
-			if(canciones.get(i).getId()==id){ 
+        for(int i = 0; i < canciones.size() && seguir; i++){
+			if(canciones.get(i).getId()==id){
                 c = canciones.get(i);
                 seguir = false;
             }

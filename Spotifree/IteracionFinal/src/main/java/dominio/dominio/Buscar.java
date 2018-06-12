@@ -10,11 +10,11 @@ public class Buscar {
 			idd=can.get(i).getId();
 			if (idd == id) {
 				encontrado=1;
-			} 
+			}
 		}
 		return encontrado;
 	}
-	
+
 	public Cancion buscarcancion(final ArrayList<Cancion> can, final String nombre){
 		String name;
 		Cancion cancion = null;
@@ -33,9 +33,9 @@ public class Buscar {
 		int i;
 		for(i=0;i<can.size();i++){
 			name=can.get(i).getNombre();
-			if (name == nombre) {
+			if (name.equals(nombre)) {
 				art=can.get(i).getArtista();
-			} 
+			}
 		}
 		return art;
 	}
@@ -46,9 +46,9 @@ public class Buscar {
 		int i;
 		for(i=0;i<can.size();i++){
 			name=can.get(i).getNombre();
-			if (name == nombre) {
+			if (name.equals(nombre)) {
 				art=can.get(i).getAlbum();
-			} 
+			}
 		}
 		return art;
 	}
@@ -59,9 +59,9 @@ public class Buscar {
 		String name;
 		for(i=0;i<art.size();i++){
 			name=art.get(i).getNombre();
-			if (name == nombre) {
+			if (name.equals(nombre)) {
 				artista=art.get(i);
-			} 
+			}
 		}
 		return artista;
 	}
@@ -72,9 +72,9 @@ public class Buscar {
 		String name;
 		for(i=0;i<alb.size();i++){
 			name=alb.get(i).getNombre();
-			if (name == nombre) {
+			if (name.equals(nombre)) {
 				albu=alb.get(i);
-			} 
+			}
 		}
 		return albu;
 	}
