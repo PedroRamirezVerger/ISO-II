@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Servidor {
 	private ArrayList<Cliente> clientes=new ArrayList<Cliente>();
 	
-	public Servidor(ArrayList<Cliente> clientes) {
+	public Servidor(final ArrayList<Cliente> clientes) {
 		super();
 		this.clientes = clientes;
 	}

@@ -12,7 +12,7 @@ public class Usuario {
 	private boolean userValido = false, passValido = false, tarjValido = false, paisValido = false,
 			completoValido = false;
 
-	public Usuario(final String nombreUser, String pass, Long tarjCredito, String pais, String nombreCompleto) {
+	public Usuario(final String nombreUser,final String pass,final Long tarjCredito,final String pais,final String nombreCompleto) {
 		this.nombreUser = nombreUser;
 		this.pass = pass;
 		this.tarjCredito = tarjCredito;

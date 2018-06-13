@@ -19,7 +19,7 @@ public class Cancion {
 	private double precio;
 	private GestorCancion miGestor;
 
-	public Cancion(int duracion, int id, String nombre, String estilo, Artista artista, Album album, double precio) {
+	public Cancion(final int duracion,final int id,final String nombre,final String estilo,final Artista artista,final Album album,final double precio) {
 		super();
 		this.duracion = duracion;
 		this.id = id;

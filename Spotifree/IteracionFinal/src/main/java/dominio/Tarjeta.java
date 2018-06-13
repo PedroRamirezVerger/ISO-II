@@ -7,7 +7,7 @@ public class Tarjeta {
     private Fecha fecha_caducidad; // Fecha en la que caduca la tarjeta de cr�dito
     private int cod_verificacion; // C�digo de verificaci�n de la tarjeta de cr�dito
     
-    public Tarjeta(long num_tarjeta, String titular, String entidad, Fecha fecha_caducidad, int cod_verificacion){ // Constructor
+    public Tarjeta(final long num_tarjeta,final String titular,final String entidad,final Fecha fecha_caducidad,final int cod_verificacion){ // Constructor
         this.num_tarjeta = num_tarjeta;
         this.titular = titular;
         this.entidad = entidad;

@@ -1,8 +1,8 @@
 package dominio;
 
 public class Modificar {
-	public Cancion modificarcancion(Cancion c, int duracion, int id, String nombre, String estilo, Artista artista,
-			Album album, double precio) {
+	public Cancion modificarcancion(final Cancion c,final int duracion,final int id,final String nombre,final String estilo,final Artista artista,
+			final Album album,final double precio) {
 		c.setDuracion(duracion);
 		c.setId(id);
 		c.setNombre(nombre);

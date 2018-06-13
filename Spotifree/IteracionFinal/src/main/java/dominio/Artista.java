@@ -7,7 +7,7 @@ public class Artista {
 	private String nombre;
 	private ArrayList<Album> albumes;
 	private static ArrayList<Cancion> canciones;
-	public Artista(String nombre, ArrayList<Album> albumes, ArrayList<Cancion> canciones) {
+	public Artista(final String nombre,final ArrayList<Album> albumes,final ArrayList<Cancion> canciones) {
 		super();
 		this.nombre = nombre;
 		this.albumes = albumes;

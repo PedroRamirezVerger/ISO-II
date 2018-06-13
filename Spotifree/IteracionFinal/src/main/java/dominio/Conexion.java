@@ -4,7 +4,7 @@ public class Conexion {
 	private Cliente cliente;
 	private Servidor servidor;
 	private String mensaje;
-	public Conexion(Cliente cliente, Servidor servidor) {
+	public Conexion(final Cliente cliente,final Servidor servidor) {
 		super();
 		this.cliente = cliente;
 		this.servidor = servidor;

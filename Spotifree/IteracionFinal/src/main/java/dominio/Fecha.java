@@ -5,7 +5,7 @@ package dominio;
 	    private int mes;
 	    private int anio;
 	    
-	    public Fecha(int dia, int mes, int anio){
+	    public Fecha(final int dia,final int mes,final int anio){
 	    	this.dia = dia;
 	    	this.mes = mes;
 	    	this.anio = anio;
